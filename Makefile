@@ -2,11 +2,11 @@
 LDLIBS=-lpthread
 QLIBS=-lQt5Core -lQt5Gui -lQt5Widgets
 INCLUDE := -Iinclude/ \
-		-I/home/sky/Qt5.9.5/5.9.5/gcc_64/include \
-		-I/home/sky/Qt5.9.5/5.9.5/gcc_64/include/QtWidgets \
-		-I/home/sky/Qt5.9.5/5.9.5/gcc_64/include/QtCore \
-		-I/home/sky/Qt5.9.5/5.9.5/gcc_64/include/QtGui
-LINKS=-L/home/sky/Qt5.9.5/5.9.5/gcc_64/lib
+		-I/home/pi/Downloads/qt-everywhere-opensource-src-5.9.5/qtbase/include \
+		-I/home/pi/Downloads/qt-everywhere-opensource-src-5.9.5/qtbase/include/QtWidgets \
+		-I/home/pi/Downloads/qt-everywhere-opensource-src-5.9.5/qtbase/include/QtCore \
+		-I/home/pi/Downloads/qt-everywhere-opensource-src-5.9.5/qtbase/include/QtGui
+LINKS=-L/home/pi/Downloads/qt-everywhere-opensource-src-5.9.5/qtbase/lib
 CC=gcc
 CXX=g++
 CXXFLAGS=-fPIC
@@ -23,5 +23,5 @@ mhw-arm: mhw.c
 	$(CC) -o mhw-arm mhw.c $(LDLIBS)
 
 qthw-arm: qthw.cpp
-	$(CXX) $(CXXFLAGS) $(LINKS) $(INCLUDE) -o qthw qthw.cpp $(QLIBS)
+	$(CXX) $(CXXFLAGS) $(LINKS) $(INCLUDE) -o qthw-arm qthw.cpp $(QLIBS)
 
