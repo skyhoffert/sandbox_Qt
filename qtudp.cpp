@@ -13,6 +13,11 @@ int msleep(long msec);
 int main(int argc, char* argv[]) {
     printf("Starting qtudp.\n");
 
+    if (argc != 3) {
+        printf("ERR. Incorrect argc.\n");
+        return 1;
+    }
+
     int port_rx = atoi(argv[1]);
     int port_tx = atoi(argv[2]);
 
